@@ -42,13 +42,11 @@ class Group extends Component {
 			  {
 			  	this.state.edit ?
 					  <input type="text"
-					         style={{border: 'none'}}
 					         className="form-control"
 					         value={this.state.value}
 					         onChange={this.handleChange}
 					         autoFocus/> :
 						  <input type="text"
-						              style={{border: 'none'}}
 						              className="form-control"
 						              value={this.props.data.name}
 		                      disabled/>
@@ -58,13 +56,13 @@ class Group extends Component {
 					  <div className="btn-group" role="group">
 						  <button onClick={this.toggleEdit}
 						          style={{border: 'none',
-							          background: 'transparent',
-							          color: 'green'}}>
+							                background: 'transparent',
+							                color: 'green'}}>
 							  <i className="fas fa-check"></i>
 						  </button>
 						  <button style={{border: 'none',
-							  background: 'transparent',
-							  color: 'red'}}>
+							                background: 'transparent',
+							                color: 'red'}}>
 							  <i className="fas fa-trash"></i>
 						  </button>
 					  </div> : null
