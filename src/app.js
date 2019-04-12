@@ -69,7 +69,7 @@ class App extends Component {
 			<div className="container app">
 				<h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
 				<Input addGroup={this.addGroup} />
-				<GroupList data={this.state.data} changeGroup={this.changeGroupName} deleteGroup={this.deleteGroup} />
+				<GroupList data={this.state.data} changeGroupName={this.changeGroupName} deleteGroup={this.deleteGroup} />
 			</div>
 		)
 	};
