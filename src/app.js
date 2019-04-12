@@ -33,19 +33,19 @@ class App extends Component {
 		]
 	};
 
-	addGroup(name) {
-		this.setState([...this.state.data, {
-			id: Date.now(),
-			name: name,
-			tasks: []
-		}])
-	}
+	addGroup = (name) => {
+		this.setState({data:[...this.state.data, {
+				id: Date.now(),
+				name: name,
+				tasks: []
+			}]})
+	};
 
 	render() {
 		return (
 			<div className="container app">
-				<Input/>
-				<GroupList data={this.state.data}/>
+				<Input addGroup={this.addGroup} />
+				<GroupList data={this.state.data} />
 			</div>
 		)
 	};

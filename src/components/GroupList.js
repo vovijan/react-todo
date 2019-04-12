@@ -1,16 +1,16 @@
 import React  from 'react';
+import Group from './Group';
 
-function GroupList(props) {
+const GroupList = (props) => {
 	return (
 		<ul>
 			{
 				props.data.map(group => {
-					return <li>{group.name}</li>
+					return <Group data={group} />
 				})
 			}
 		</ul>
 	)
-
-}
+};
 
 export default GroupList;
