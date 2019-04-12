@@ -55,14 +55,12 @@ class Group extends Component {
 			  	this.state.isHover ?
 					  <div className="btn-group" role="group">
 						  <button onClick={this.toggleEdit}
-						          style={{border: 'none',
-							                background: 'transparent',
-							                color: 'green'}}>
+						          className="btn btn-light"
+						          style={{color: 'green'}}>
 							  <i className="fas fa-check"></i>
 						  </button>
-						  <button style={{border: 'none',
-							                background: 'transparent',
-							                color: 'red'}}>
+						  <button className="btn btn-light"
+						          style={{color: 'red'}}>
 							  <i className="fas fa-trash"></i>
 						  </button>
 					  </div> : null
