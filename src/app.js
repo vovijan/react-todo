@@ -44,6 +44,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="container app">
+				<h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
 				<Input addGroup={this.addGroup} />
 				<GroupList data={this.state.data} />
 			</div>

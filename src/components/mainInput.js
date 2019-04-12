@@ -20,12 +20,15 @@ class Input extends Component {
       <>
         <div className="d-flex">
           <input type="text"
-                 className="form-control"
+                 className="form-control mr-3"
                  onChange={this.handleChange}
                  value={this.state.value}
+                 autoFocus
           />
           <button className="btn btn-primary"
-                  onClick={this.handleClick} >Add</button>
+                  onClick={this.handleClick} >
+	          <i className="fas fa-plus"></i>
+          </button>
         </div>
       </>
     )
