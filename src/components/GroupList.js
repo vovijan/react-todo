@@ -5,8 +5,8 @@ const GroupList = (props) => {
 	return (
 		<ul style={{marginTop: 50}}>
 			{
-				props.data.map(group => {
-					return <Group data={group} />
+				props.data.map((group) => {
+					return <Group key={group.id} data={group} changeGroup={props.changeGroup}/>
 				})
 			}
 		</ul>

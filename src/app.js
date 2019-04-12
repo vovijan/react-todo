@@ -41,12 +41,23 @@ class App extends Component {
 			}]})
 	};
 
+	changeGroup = (id, name) => {
+		this.setState({
+			data: this.state.data.map(group => {
+				if (group.id === id) {
+					group.name = name;
+				}
+				return group
+			})
+		})
+	};
+
 	render() {
 		return (
 			<div className="container app">
 				<h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
 				<Input addGroup={this.addGroup} />
-				<GroupList data={this.state.data} />
+				<GroupList data={this.state.data} changeGroup={this.changeGroup}/>
 			</div>
 		)
 	};
