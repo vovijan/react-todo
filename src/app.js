@@ -33,6 +33,7 @@ class App extends Component {
 		]
 	};
 
+	//  Adding a new group
 	addGroup = (name) => {
 		this.setState({data:[...this.state.data, {
 				id: Date.now(),
@@ -41,7 +42,8 @@ class App extends Component {
 			}]})
 	};
 
-	changeGroup = (id, name) => {
+	//  Replacing the name in the group name when editing
+	changeGroupName = (id, name) => {
 		this.setState({
 			data: this.state.data.map(group => {
 				if (group.id === id) {
@@ -57,7 +59,7 @@ class App extends Component {
 			<div className="container app">
 				<h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
 				<Input addGroup={this.addGroup} />
-				<GroupList data={this.state.data} changeGroup={this.changeGroup}/>
+				<GroupList data={this.state.data} changeGroup={this.changeGroupName}/>
 			</div>
 		)
 	};

@@ -15,9 +15,10 @@ class Group extends Component {
     })
 	};
 
+ 	//  Transfer to the global state of the new group name
  	toggleEdit = () => {
  		if (this.state.edit) {
- 			this.props.changeGroup(this.props.data.id, this.state.value)
+ 			this.props.changeGroupName(this.props.data.id, this.state.value)
 	  }
  		this.setState({
 		  edit: !this.state.edit
@@ -47,9 +48,9 @@ class Group extends Component {
 					         onChange={this.handleChange}
 					         autoFocus/> :
 						  <input type="text"
-						              className="form-control"
-						              value={this.props.data.name}
-		                      disabled/>
+						         className="form-control"
+						         value={this.props.data.name}
+						         disabled/>
 			  }
 			  {
 			  	this.state.isHover ?
