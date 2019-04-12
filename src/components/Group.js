@@ -15,6 +15,11 @@ class Group extends Component {
     })
 	};
 
+ 	//  Transfer id to global component
+ 	handleClick = () =>{
+ 		this.props.deleteGroup(this.props.data.id)
+  };
+
  	//  Transfer to the global state of the new group name
  	toggleEdit = () => {
  		if (this.state.edit) {
@@ -60,7 +65,8 @@ class Group extends Component {
 						          style={{color: 'green'}}>
 							  <i className="fas fa-check"></i>
 						  </button>
-						  <button className="btn btn-light"
+						  <button onClick={this.handleClick}
+							        className="btn btn-light"
 						          style={{color: 'red'}}>
 							  <i className="fas fa-trash"></i>
 						  </button>

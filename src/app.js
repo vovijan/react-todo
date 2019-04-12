@@ -35,11 +35,21 @@ class App extends Component {
 
 	//  Adding a new group
 	addGroup = (name) => {
-		this.setState({data:[...this.state.data, {
-				id: Date.now(),
-				name: name,
-				tasks: []
+		this.setState({
+				data:[...this.state.data, {
+					id: Date.now(),
+					name: name,
+					tasks: []
 			}]})
+	};
+
+	//  Delete group
+	deleteGroup = (id) => {
+		this.setState({
+			data: this.state.data.filter(item => {
+				return item.id !== id;
+			})
+		})
 	};
 
 	//  Replacing the name in the group name when editing
@@ -59,7 +69,7 @@ class App extends Component {
 			<div className="container app">
 				<h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
 				<Input addGroup={this.addGroup} />
-				<GroupList data={this.state.data} changeGroup={this.changeGroupName}/>
+				<GroupList data={this.state.data} changeGroup={this.changeGroupName} deleteGroup={this.deleteGroup} />
 			</div>
 		)
 	};
