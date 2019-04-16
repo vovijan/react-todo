@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 
 class Input extends Component {
 
-	state ={
+	state = {
 		value: ''
 	};
 
 	handleChange = (event) => {
-		this.setState({value: event.target.value})
+		this.setState({ value: event.target.value })
 	};
 
 	handleClick = () => {
 		this.props.addGroup(this.state.value);
-		this.setState({value: ''})
+		this.setState({ value: '' })
 	};
 
 	render() {

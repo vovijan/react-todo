@@ -1,4 +1,4 @@
-import { ADD_GROUP, EDIT_GROUP } from './constants';
+import { ADD_GROUP, EDIT_GROUP, DELETE_GROUP } from './constants';
 
 const initialState = {
   data: [
@@ -44,13 +44,18 @@ export const reducer = (state = initialState, action) => {
     case EDIT_GROUP:
       return {
         ...state,
-        data: state.data.map(grroup => {
-          if (grroup.id === action.payload.id) {
-            grroup.name = action.payload.name;
+        data: state.data.map(group => {
+          if (group.id === action.payload.id) {
+            group.name = action.payload.name;
           }
-          return grroup;
+          return group;
         })
       };
+    case DELETE_GROUP:
+      return {
+        ...state,
+        data: state.data.filter(group => group.id !== action.payload.id)
+      }
     default:
       return state;
   }
