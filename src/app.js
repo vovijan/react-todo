@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import Input from './components/mainInput';
+//import Input from './components/mainInput';
 //import GroupList from './components/GroupList';
 
 import './app.css';
 import GroupsContainer from './containers/GroupsContainer';
+import InputContainer from './containers/InputContainer';
 
 class App extends Component {
 
@@ -44,7 +45,7 @@ class App extends Component {
 			}]})
 	};
 */
-	//  Delete group
+/*	//  Delete group
 	deleteGroup = (id) => {
 		this.setState({
 			data: this.state.data.filter(item => {
@@ -52,6 +53,7 @@ class App extends Component {
 			})
 		})
 	};
+	*/
 /*
 	//  Replacing the name in the group name when editing
 	changeGroupName = (id, name) => {
@@ -69,7 +71,7 @@ class App extends Component {
 		return (
 			<div className="container app">
 				<h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
-				<Input addGroup={this.addGroup} />
+				<InputContainer />
 				{/*<GroupList data={this.state.data} changeGroup={this.changeGroupName} deleteGroup={this.deleteGroup} />*/}
 				<GroupsContainer />
 			</div>
