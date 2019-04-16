@@ -54,7 +54,7 @@ export const reducer = (state = initialState, action) => {
     case DELETE_GROUP:
       return {
         ...state,
-        data: state.data.filter(group => group.id !== action.payload.id)
+        data: state.data.filter(group => group.id !== action.payload)
       }
     default:
       return state;

@@ -9,12 +9,12 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   addGroup: (name) => {
-    dispatch(addGroup({ name }));
+    dispatch(addGroup( name ));
   }
 });
 
-const InputContainer = ({ addGroup }) => {
-  return <Input addGroup={addGroup} />
+const InputContainer = ({ groups, addGroup }) => {
+  return <Input data={groups} addGroup={addGroup} />
 };
 
 export default connect (
