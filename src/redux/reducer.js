@@ -1,5 +1,4 @@
 import { ADD_GROUP, EDIT_GROUP } from './constants';
-import { stat } from 'fs';
 
 const initialState = {
   data: [

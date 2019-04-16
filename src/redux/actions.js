@@ -5,7 +5,7 @@ export const addGroup = payload => ({
   payload
 });
 
-export const aditGroup = payload => ({
+export const editGroup = payload => ({
   type: EDIT_GROUP,
   payload
 });

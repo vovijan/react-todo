@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Input from './components/mainInput';
-import GroupList from './components/GroupList';
+//import GroupList from './components/GroupList';
 
 import './app.css';
 
