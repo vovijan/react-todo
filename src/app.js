@@ -3,6 +3,7 @@ import Input from './components/mainInput';
 //import GroupList from './components/GroupList';
 
 import './app.css';
+import GroupsContainer from './containers/GroupsContainer';
 
 class App extends Component {
 
@@ -70,6 +71,7 @@ class App extends Component {
 				<h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
 				<Input addGroup={this.addGroup} />
 				{/*<GroupList data={this.state.data} changeGroup={this.changeGroupName} deleteGroup={this.deleteGroup} />*/}
+				<GroupsContainer />
 			</div>
 		)
 	};

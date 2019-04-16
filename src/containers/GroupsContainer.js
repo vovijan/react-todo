@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { editGroup, deleteGroup } from '../redux/actions';
 
 const mapStateToProps = state => ({
-  group: state.data
+  groups: state.data
 });
 
 const mapDispatchToProps = dispatch => ({
