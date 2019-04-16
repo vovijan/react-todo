@@ -6,7 +6,7 @@ import './app.css';
 
 class App extends Component {
 
-	state = {
+/*	state = {
 		data: [
 			{
 				id: 1,
@@ -42,7 +42,7 @@ class App extends Component {
 					tasks: []
 			}]})
 	};
-
+*/
 	//  Delete group
 	deleteGroup = (id) => {
 		this.setState({
@@ -51,7 +51,7 @@ class App extends Component {
 			})
 		})
 	};
-
+/*
 	//  Replacing the name in the group name when editing
 	changeGroupName = (id, name) => {
 		this.setState({
@@ -63,13 +63,13 @@ class App extends Component {
 			})
 		})
 	};
-
+*/
 	render() {
 		return (
 			<div className="container app">
 				<h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
 				<Input addGroup={this.addGroup} />
-				<GroupList data={this.state.data} changeGroup={this.changeGroupName} deleteGroup={this.deleteGroup} />
+				{/*<GroupList data={this.state.data} changeGroup={this.changeGroupName} deleteGroup={this.deleteGroup} />*/}
 			</div>
 		)
 	};

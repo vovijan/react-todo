@@ -1,7 +1,7 @@
 import React from 'react';
 import GroupList from '../components/GroupList';
 import { connect } from 'react-redux';
-import { rditGroup } from '../redux/actions';
+import { editGroup } from '../redux/actions';
 
 const mapStateToProps = state => ({
   group: state.data
