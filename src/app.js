@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 //import Input from './components/mainInput';
 //import GroupList from './components/GroupList';
-
-import './app.css';
 import GroupsContainer from './containers/GroupsContainer';
 import InputContainer from './containers/InputContainer';
+import './app.css';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
 
@@ -69,12 +70,14 @@ class App extends Component {
 */
 	render() {
 		return (
-			<div className="container app">
-				<h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
-				<InputContainer />
-				{/*<GroupList data={this.state.data} changeGroup={this.changeGroupName} deleteGroup={this.deleteGroup} />*/}
-				<GroupsContainer />
-			</div>
+			<Router>
+				<div className="container app">
+					<h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
+					<InputContainer />
+					{/*<GroupList data={this.state.data} changeGroup={this.changeGroupName} deleteGroup={this.deleteGroup} />*/}
+					<GroupsContainer />
+				</div>
+			</Router>
 		)
 	};
 }
