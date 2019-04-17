@@ -59,11 +59,10 @@ class Group extends Component {
 						         disabled/>
 			  }
 			  {
-			  	this.state.isHover ?
+			  	this.state.isHover ?	
 					  <div className="btn-group" role="group">
-							<Link to={`/${this.state.value}`}>
-								<button 
-												className="btn btn-light"
+							<Link to={`/${this.props.data.name}`}>
+								<button className="btn btn-light"
 												title="Enter">
 									<i className="fas fa-sign-in-alt"></i>
 								</button>
