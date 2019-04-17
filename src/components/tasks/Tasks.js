@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 
-const Tasks = (props) => {
+const Tasks = () => {
   return (
     <Fragment>
-      <h1>{props.data.name}</h1>
+      <h1>dsfsdfsdfs</h1>
     </Fragment>
   )
 }

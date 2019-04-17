@@ -5,7 +5,7 @@ import GroupsContainer from './containers/GroupsContainer';
 import InputContainer from './containers/InputContainer';
 import './app.css';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import TasksContainer from './containers/TasksContainer';
 
 class App extends Component {
@@ -73,12 +73,10 @@ class App extends Component {
 		return (
 			<Router>
 				<div className="container app">
+					<Route path='/' exact component={InputContainer} />
+					<Route path='/' exact component={GroupsContainer} />
 					<Route path='/:id' component={TasksContainer} />
-					<h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
-					<InputContainer />
-					{/*<GroupList data={this.state.data} changeGroup={this.changeGroupName} deleteGroup={this.deleteGroup} />*/}
-					<GroupsContainer />
-					
+					{/*<GroupList data={this.state.data} changeGroup={this.changeGroupName} deleteGroup={this.deleteGroup} />*/}			
 				</div>
 			</Router>
 		)

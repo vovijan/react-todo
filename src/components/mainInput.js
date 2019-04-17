@@ -18,6 +18,7 @@ class Input extends Component {
 	render() {
     return (
       <>
+        <h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
         <div className="d-flex">
           <input type="text"
                  className="form-control mr-3"
