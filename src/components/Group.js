@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Group extends Component {
 
@@ -60,14 +61,25 @@ class Group extends Component {
 			  {
 			  	this.state.isHover ?
 					  <div className="btn-group" role="group">
+							<Link to={`/${this.state.value}`}>
+								<button 
+												className="btn btn-light"
+												title="Enter">
+									<i className="fas fa-sign-in-alt"></i>
+								</button>
+							</Link>
 						  <button onClick={this.toggleEdit}
 						          className="btn btn-light"
-						          style={{color: 'green'}}>
-							  <i className="fas fa-check"></i>
+						          style={{color: 'green'}}
+											title="Edit">
+											{
+												this.state.edit ? <i className="fas fa-check"></i> : <i className="fas fa-edit"></i>
+											}
 						  </button>
 						  <button onClick={this.handleClick}
 							        className="btn btn-light"
-						          style={{color: 'red'}}>
+						          style={{color: 'red'}}
+											title="Delete">
 							  <i className="fas fa-trash"></i>
 						  </button>
 					  </div> : null
