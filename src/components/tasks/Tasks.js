@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import AppHeader from './AppHeader';
+import TasksHeader from './TasksHeader';
 
 const Tasks = props => {
   const { name } = props.group;
   return (
     <Fragment>
-      <AppHeader name={name} />
+      <TasksHeader name={name} />
       <Link to='/'>
         <i className="fas fa-chevron-circle-left"></i>
         &nbsp;&nbsp;Back, please!

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const AppHeader = props => {
+const TasksHeader = props => {
   return (
     <Fragment>
       <h1>
@@ -13,4 +13,4 @@ const AppHeader = props => {
   )
 }
 
-export default AppHeader;
+export default TasksHeader;
