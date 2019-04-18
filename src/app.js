@@ -75,7 +75,7 @@ class App extends Component {
 				<div className="container app">
 					<Route path='/' exact component={InputContainer} />
 					<Route path='/' exact component={GroupsContainer} />
-					<Route path='/:id' component={TasksContainer} />
+					<Route path='/:groupName' component={TasksContainer} />
 					{/*<GroupList data={this.state.data} changeGroup={this.changeGroupName} deleteGroup={this.deleteGroup} />*/}			
 				</div>
 			</Router>

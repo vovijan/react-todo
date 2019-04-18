@@ -1,7 +1,7 @@
 import React from 'react';
 import Group from './Group';
 
-const GroupList = (props) => {
+const GroupList = props => {
 	return (
 		<ul style={{ marginTop: 50 }}>
 			{
