@@ -3,7 +3,8 @@ import React, { Fragment } from 'react';
 import './styleTasks.css';
 
 const TodoItem = props => {
-  const { name, completed } = props.tasks;
+  const { id, name, completed } = props.tasks;
+  const groupId = props.id;
   const completedStyle = {
     fontStyle: "italic",
     color: "#cdcdcd",
@@ -15,6 +16,7 @@ const TodoItem = props => {
         <input 
           type="checkbox" 
           checked={ completed }
+          onChange={() => props.changeTask({ groupId, id })}
         />
         <span style={ completed ? completedStyle : null }>{ name }</span>
       </div>

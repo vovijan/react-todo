@@ -1,4 +1,4 @@
-import { ADD_GROUP, EDIT_GROUP, DELETE_GROUP, ADD_TASK } from './constants';
+import { ADD_GROUP, EDIT_GROUP, DELETE_GROUP, CHANGE_TASK } from './constants';
 
 const initialState = {
   data: [
@@ -9,7 +9,7 @@ const initialState = {
         {
           id: 2,
           name: 'Start project',
-          completed: true
+          completed: false
         },
         {
           id: 3,
@@ -49,30 +49,46 @@ export const reducer = (state = initialState, action) => {
     case EDIT_GROUP:
       return {
         ...state,
-        data: state.data.map(group => {
-          if (group.id === action.payload.id) {
-            group.name = action.payload.name;
-          }
-          return group;
-        })
+        data: [ 
+          ...state.data.map(group => {
+            if (group.id === action.payload.id) {
+              group.name = action.payload.name;
+            }
+            return group;
+          })
+        ]
       };
     case DELETE_GROUP:
       return {
         ...state,
         data: state.data.filter(group => group.id !== action.payload)
       }
-    case  ADD_TASK:
+    /*case  ADD_TASK:
       return {
 
+      }*/
+    case CHANGE_TASK:
+      return {
+        ...state,
+        data: state.data.map(group => {
+          if (group.id === action.payload.groupId) {
+            return {
+              ...group, 
+              tasks: group.tasks.map(task => {
+                if (task.id === action.payload.id) {
+                  task.completed = !task.completed;
+                }
+                return task;
+              })
+            }
+          }
+          return group;
+        })
       }
-    case  CHANGE_TASK:
+    /*case  DELETE_TASK:
       return {
 
-      }
-    case  DELETE_TASK:
-      return {
-
-      }
+      }*/
     default:
       return state;
   }

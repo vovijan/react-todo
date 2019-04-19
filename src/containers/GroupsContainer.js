@@ -17,7 +17,11 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const GroupsContainer = ({ groups, editGroup, deleteGroup }) => {
-  return <GroupList data={groups} changeGroupName={editGroup} deleteGroup={deleteGroup} />
+  return  <GroupList 
+            data={groups} 
+            changeGroupName={editGroup} 
+            deleteGroup={deleteGroup} 
+          />
 };
 
 export default connect(

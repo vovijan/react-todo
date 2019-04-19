@@ -1,6 +1,7 @@
 import React from 'react';
 import Tasks from '../components/tasks/Tasks';
 import { connect } from 'react-redux';
+import { changeTask } from '../redux/actions';
 
 const mapStateToProps = (state, ownProps) => {
   const selectedGroup = ownProps.match.params.groupName;
@@ -13,10 +14,17 @@ const mapStateToProps = (state, ownProps) => {
   return props;
 };
 
-const TasksContainer = props => {
-  return <Tasks group={props} />
+const mapDispatchToProps = dispatch => ({
+  changeTask: ({groupId, id}) => {
+    dispatch(changeTask({groupId, id}));
+  }
+});
+
+const TasksContainer = (props, changeTask) => {
+  return <Tasks group={props} changeTask={changeTask} />
 };
 
 export default connect (
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(TasksContainer)

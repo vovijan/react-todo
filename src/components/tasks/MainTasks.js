@@ -10,7 +10,12 @@ const MainTasks = props => {
       <div className="todo-list">
         {
           props.tasks.map(task => {
-            return <TodoItem key={task.id} tasks={task} />
+            return <TodoItem 
+                    key={task.id} 
+                    id={props.id} 
+                    tasks={task} 
+                    changeTask={props.changeTask} 
+                  />
           })
         }
       </div>
