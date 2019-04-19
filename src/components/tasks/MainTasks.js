@@ -12,7 +12,7 @@ const MainTasks = props => {
           props.tasks.map(task => {
             return <TodoItem 
                     key={task.id} 
-                    id={props.id} 
+                    groupId={props.groupId} 
                     tasks={task} 
                     changeTask={props.changeTask} 
                   />

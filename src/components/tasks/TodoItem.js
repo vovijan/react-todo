@@ -4,7 +4,7 @@ import './styleTasks.css';
 
 const TodoItem = props => {
   const { id, name, completed } = props.tasks;
-  const groupId = props.id;
+  const groupId = props.groupId;
   const completedStyle = {
     fontStyle: "italic",
     color: "#cdcdcd",

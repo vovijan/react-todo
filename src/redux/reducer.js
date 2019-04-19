@@ -63,10 +63,25 @@ export const reducer = (state = initialState, action) => {
         ...state,
         data: state.data.filter(group => group.id !== action.payload)
       }
-    /*case  ADD_TASK:
+    case  ADD_TASK:
       return {
-
-      }*/
+        ...state,
+        data: state.data.map(group => {
+          if (group.id === action.payload.groupId) {
+            return {
+              ...group,
+              tasks: [
+                ...group.tasks,
+                {
+                  id: Date.now(),
+                  name: action.payload,
+                  completed: false
+                }
+              ]
+            }
+          return group;
+        })
+      }
     case CHANGE_TASK:
       return {
         ...state,

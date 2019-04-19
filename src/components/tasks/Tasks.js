@@ -11,7 +11,7 @@ const Tasks = props => {
     <Fragment>
       <TasksHeader name={name} />
       <MainTasks 
-        id={id} 
+        groupId={id} 
         tasks={tasks} 
         changeTask={changeTask} 
       />
