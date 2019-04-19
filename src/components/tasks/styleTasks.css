@@ -1,0 +1,26 @@
+.todo-list {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #efefef;
+  padding: 30px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #cecece;
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  color: #333333;
+}
+
+input[type=checkbox] {
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+input[type=checkbox]:focus {
+  outline: 0;
+}

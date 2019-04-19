@@ -8,6 +8,11 @@ const initialState = {
       tasks: [
         {
           id: 2,
+          name: 'Start project',
+          completed: true
+        },
+        {
+          id: 3,
           name: 'Finish project',
           completed: false
         }
