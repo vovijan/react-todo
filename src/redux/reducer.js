@@ -1,4 +1,4 @@
-import { ADD_GROUP, EDIT_GROUP, DELETE_GROUP } from './constants';
+import { ADD_GROUP, EDIT_GROUP, DELETE_GROUP, ADD_TASK } from './constants';
 
 const initialState = {
   data: [
@@ -60,6 +60,18 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         data: state.data.filter(group => group.id !== action.payload)
+      }
+    case  ADD_TASK:
+      return {
+
+      }
+    case  CHANGE_TASK:
+      return {
+
+      }
+    case  DELETE_TASK:
+      return {
+
       }
     default:
       return state;
