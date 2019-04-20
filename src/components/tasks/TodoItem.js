@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import './styleTasks.css';
 
@@ -11,7 +11,7 @@ const TodoItem = props => {
     textDecoration: "line-through"
 }
   return (
-    <Fragment>
+    <>
       <div className="todo-item">
         <input 
           type="checkbox" 
@@ -20,7 +20,7 @@ const TodoItem = props => {
         />
         <span style={ completed ? completedStyle : null }>{ name }</span>
       </div>
-    </Fragment>
+    </>
   )
 }
 

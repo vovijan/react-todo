@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 const AddTask = props => {
   return (
-    <Fragment>
+    <>
       <div className="d-flex pt-4 pb-4">
         <input 
           type="text"
@@ -13,7 +13,7 @@ const AddTask = props => {
           <i className="fas fa-plus"></i>
         </button>
       </div>
-    </Fragment>
+    </>
   )
 }
 
