@@ -7,30 +7,34 @@ class Input extends Component {
 	};
 
 	handleChange = (event) => {
-		this.setState({ value: event.target.value })
+		this.setState({ 
+      value: event.target.value
+    });
 	};
 
-	handleClick = () => {
+	onSubmit = (event) => {
+    event.preventDefault();
 		this.props.addGroup(this.state.value);
-		this.setState({ value: '' })
+		this.setState({ 
+      value: ''
+    });
 	};
 
 	render() {
     return (
       <>
         <h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
-        <div className="d-flex">
+        <form className="d-flex" onSubmit={this.onSubmit}>
           <input type="text"
                  className="form-control mr-3"
                  onChange={this.handleChange}
                  value={this.state.value}
                  autoFocus
           />
-          <button className="btn btn-primary"
-                  onClick={this.handleClick} >
+          <button className="btn btn-primary">
 	          <i className="fas fa-plus"></i>
           </button>
-        </div>
+        </form>
       </>
     )
 	}

@@ -19,7 +19,7 @@ const MainTasks = props => {
           })
         }
       </div>
-      <AddTask />
+      <AddTask addTask={props.addTask} groupId={props.groupId} />
     </Fragment>
   )
 };

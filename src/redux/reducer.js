@@ -76,7 +76,7 @@ export const reducer = (state = initialState, action) => {
                 ...group.tasks,
                 {
                   id: Date.now(),
-                  name: action.payload,
+                  name: action.payload.label,
                   completed: false
                 }
               ]
