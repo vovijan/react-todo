@@ -15,11 +15,11 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  changeTask: ({groupId, id}) => {
-    dispatch(changeTask({groupId, id}));
-  },
   addTask: (groupId, label) => {
-    dispatch(addTask(groupId, label));
+    dispatch(addTask({groupId, label}));
+  },
+  changeTask: (groupId, id) => {
+    dispatch(changeTask({groupId, id}));
   }
 });
 
