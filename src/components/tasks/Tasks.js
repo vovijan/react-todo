@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import TasksHeader from './TasksHeader';
-import MainTasks from './MainTasks';
+import React        from 'react';
+import { Link }     from 'react-router-dom';
+import TasksHeader  from './TasksHeader';
+import MainTasks    from './MainTasks';
 
 import './styleTasks.css';
 

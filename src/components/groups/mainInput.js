@@ -24,7 +24,11 @@ class Input extends Component {
     return (
       <>
         <h2 style={{textAlign: 'center'}}>Add new Group Task</h2>
-        <form className="d-flex" onSubmit={this.onSubmit}>
+        <form
+          style={{ marginBottom: 50 }}
+          className="d-flex" 
+          onSubmit={this.onSubmit}
+        >
           <input type="text"
                  className="form-control mr-3"
                  onChange={this.handleChange}

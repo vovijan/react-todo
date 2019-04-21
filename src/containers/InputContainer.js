@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../components/mainInput';
+import Input from '../components/groups/mainInput';
 import { connect } from 'react-redux';
 import { addGroup } from '../redux/actions';
 

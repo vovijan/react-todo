@@ -29,7 +29,7 @@ export default class AddTask extends Component {
         >
           <input 
             type="text"
-            className="form-control mr-3"
+            className="form-control mr-1"
             onChange={this.handleChange}
             value={this.state.label}
             autoFocus

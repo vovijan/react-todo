@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import TodoItem from './TodoItem';
+import TodoItem            from './TodoItem';
 
 import './styleTasks.css';
 import AddTask from './AddTask';

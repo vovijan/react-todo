@@ -1,5 +1,5 @@
 import React from 'react';
-import GroupList from '../components/GroupList';
+import GroupList from '../components/groups/GroupList';
 import { connect } from 'react-redux';
 import { editGroup, deleteGroup } from '../redux/actions';
 
