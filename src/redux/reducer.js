@@ -116,10 +116,10 @@ export const reducer = (state = initialState, action) => {
           return group;
         })
       }
-    case RENAME_TASK:
+    /*case RENAME_TASK:
       return {
-        
-      }
+
+      }*/
     default:
       return state;
   }

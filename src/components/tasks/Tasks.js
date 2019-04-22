@@ -12,7 +12,7 @@ const Tasks = props => {
       <TasksHeader name={name} />
       <MainTasks 
         groupId={id}
-        nameName={name}
+        groupName={name}
         tasks={tasks} 
         addTask={addTask}
         changeTask={changeTask}

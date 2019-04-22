@@ -13,7 +13,7 @@ const MainTasks = props => {
             return <TodoItem 
                     key={task.id} 
                     groupId={props.groupId}
-                    nameGroup={props.nameGroup}
+                    groupName={props.groupName}
                     tasks={task} 
                     changeTask={props.changeTask}
                     deleteTask={props.deleteTask}

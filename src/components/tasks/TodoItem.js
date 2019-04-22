@@ -19,7 +19,7 @@ const TodoItem = props => {
           checked={ completed }
           onChange={() => props.changeTask( groupId, props.tasks.id )}
         />
-        <Link to='/:nameTask'>
+        <Link to={`/${props.groupName}/${name}`}>
           <span style={ completed ? completedStyle : null }>{ name }</span>
         </Link>
       </div>
