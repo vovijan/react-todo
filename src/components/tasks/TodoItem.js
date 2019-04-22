@@ -11,8 +11,8 @@ const TodoItem = props => {
     textDecoration: "line-through"
 }
   return (
-    <>
-      <div className="todo-item">
+    <div className="todo-item">
+      <div>
         <input 
           type="checkbox" 
           checked={ completed }
@@ -20,7 +20,8 @@ const TodoItem = props => {
         />
         <span style={ completed ? completedStyle : null }>{ name }</span>
       </div>
-    </>
+      <button type="button" className="btn btn-light"><i class="fas fa-times"></i></button>
+    </div>
   )
 }
 

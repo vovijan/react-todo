@@ -1,4 +1,4 @@
-import { ADD_GROUP, EDIT_GROUP, DELETE_GROUP, ADD_TASK, CHANGE_TASK } from './constants';
+import { ADD_GROUP, EDIT_GROUP, DELETE_GROUP, ADD_TASK, CHANGE_TASK, DELETE_TASK } from './constants';
 
 const initialState = {
   data: [
@@ -103,10 +103,19 @@ export const reducer = (state = initialState, action) => {
           return group;
         })
       }
-    /*case  DELETE_TASK:
+    case  DELETE_TASK:
       return {
-
-      }*/
+        ...state,
+        data: state.data.map(group => {
+          if (group.id === action.payload.groupId) {
+            return {
+              ...group,
+              tasks: group.tasks.filter(task => task.id !== action.payload.id)
+            }
+          }
+          return group;
+        })
+      }
     default:
       return state;
   }

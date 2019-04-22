@@ -1,7 +1,7 @@
 import React from 'react';
 import Tasks from '../components/tasks/Tasks';
 import { connect } from 'react-redux';
-import { addTask, changeTask } from '../redux/actions';
+import { addTask, changeTask, deleteTask } from '../redux/actions';
 
 const mapStateToProps = (state, ownProps) => {
   const selectedGroup = ownProps.match.params.groupName;
@@ -20,11 +20,19 @@ const mapDispatchToProps = dispatch => ({
   },
   changeTask: (groupId, id) => {
     dispatch(changeTask({groupId, id}));
+  },
+  deleteTask: (groupId, id) => {
+    dispatch(deleteTask({groupId,id}));
   }
 });
 
-const TasksContainer = (props, changeTask, addTask) => {
-  return <Tasks group={props} changeTask={changeTask} addTask={addTask} />
+const TasksContainer = (props, addTask, changeTask, deleteTask) => {
+  return <Tasks 
+          group={props}
+          addTask={addTask}
+          changeTask={changeTask}
+          deleteTask={deleteTask}
+        />
 };
 
 export default connect (
