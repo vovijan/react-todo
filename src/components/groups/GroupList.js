@@ -11,11 +11,11 @@ const GroupList = props => {
 				{
 					props.data.map((group) => {
 						return <Group 
-											key={group.id} 
-											data={group} 
-											changeGroupName={props.changeGroupName} 
-											deleteGroup={props.deleteGroup}
-										/>
+										key={group.id} 
+										data={group} 
+										changeGroupName={props.changeGroupName} 
+										deleteGroup={props.deleteGroup}
+									/>
 					})
 				}
 			</ul>

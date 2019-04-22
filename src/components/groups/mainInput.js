@@ -30,10 +30,10 @@ class Input extends Component {
           onSubmit={this.onSubmit}
         >
           <input type="text"
-                 className="form-control mr-3"
-                 onChange={this.handleChange}
-                 value={this.state.value}
-                 autoFocus
+            className="form-control mr-3"
+            onChange={this.handleChange}
+            value={this.state.value}
+            autoFocus
           />
           <button className="btn btn-primary">
 	          <i className="fas fa-plus"></i>

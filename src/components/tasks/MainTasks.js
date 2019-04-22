@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import TodoItem            from './TodoItem';
 
 import './styleTasks.css';
@@ -6,7 +6,7 @@ import AddTask from './AddTask';
 
 const MainTasks = props => {
   return (
-    <Fragment>
+    <>
       <div className="todo-list">
         {
           props.tasks.map(task => {
@@ -14,13 +14,14 @@ const MainTasks = props => {
                     key={task.id} 
                     groupId={props.groupId} 
                     tasks={task} 
-                    changeTask={props.changeTask} 
+                    changeTask={props.changeTask}
+                    deleteTask={props.deleteTask}
                   />
           })
         }
       </div>
       <AddTask addTask={props.addTask} groupId={props.groupId} />
-    </Fragment>
+    </>
   )
 };
 

@@ -6,7 +6,7 @@ import MainTasks    from './MainTasks';
 import './styleTasks.css';
 
 const Tasks = props => {
-  const { id, name, tasks, addTask, changeTask } = props.group;
+  const { id, name, tasks, addTask, changeTask, deleteTask } = props.group;
   return (
     <>
       <TasksHeader name={name} />
@@ -15,6 +15,7 @@ const Tasks = props => {
         tasks={tasks} 
         addTask={addTask}
         changeTask={changeTask}
+        deleteTask={deleteTask}
       />
       <Link to='/'>
         <i className="fas fa-chevron-circle-left"></i>

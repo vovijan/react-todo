@@ -20,7 +20,13 @@ const TodoItem = props => {
         />
         <span style={ completed ? completedStyle : null }>{ name }</span>
       </div>
-      <button type="button" className="btn btn-light"><i class="fas fa-times"></i></button>
+      <button 
+        type="button" 
+        className="btn btn-light"
+        onClick={() => props.deleteTask(groupId, props.tasks.id)}
+      >
+        <i class="fas fa-times"></i>
+      </button>
     </div>
   )
 }
