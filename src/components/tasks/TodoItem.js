@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styleTasks.css';
 
@@ -14,18 +15,20 @@ const TodoItem = props => {
     <div className="todo-item">
       <div>
         <input 
-          type="checkbox" 
+          type="checkbox"
           checked={ completed }
           onChange={() => props.changeTask( groupId, props.tasks.id )}
         />
-        <span style={ completed ? completedStyle : null }>{ name }</span>
+        <Link to='/:nameTask'>
+          <span style={ completed ? completedStyle : null }>{ name }</span>
+        </Link>
       </div>
       <button 
         type="button" 
         className="btn btn-light"
         onClick={() => props.deleteTask(groupId, props.tasks.id)}
       >
-        <i class="fas fa-times"></i>
+        <i className="fas fa-times"></i>
       </button>
     </div>
   )

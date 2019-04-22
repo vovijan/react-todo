@@ -1,4 +1,4 @@
-import { ADD_GROUP, EDIT_GROUP, DELETE_GROUP, ADD_TASK, CHANGE_TASK, DELETE_TASK } from './constants';
+import { ADD_GROUP, EDIT_GROUP, DELETE_GROUP, ADD_TASK, CHANGE_TASK, DELETE_TASK, RENAME_TASK } from './constants';
 
 export const addGroup = payload => ({
   type: ADD_GROUP,
@@ -27,5 +27,10 @@ export const changeTask = payload => ({
 
 export const deleteTask = payload => ({
   type: DELETE_TASK,
+  payload
+});
+
+export const renameTask = payload => ({
+  type: RENAME_TASK,
   payload
 });

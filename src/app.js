@@ -7,6 +7,7 @@ import './app.css';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import TasksContainer from './containers/TasksContainer';
+import EditTask from './components/tasks/EditTask';
 
 class App extends Component {
 
@@ -75,7 +76,8 @@ class App extends Component {
 				<div className="container app">
 					<Route path='/' exact component={InputContainer} />
 					<Route path='/' exact component={GroupsContainer} />
-					<Route path='/:groupName' component={TasksContainer} />
+						<Route path='/:groupName' component={TasksContainer} />
+						<Route path='/:groupName/:taskName' component={EditTask} />
 					{/*<GroupList data={this.state.data} changeGroup={this.changeGroupName} deleteGroup={this.deleteGroup} />*/}			
 				</div>
 			</Router>

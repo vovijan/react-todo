@@ -103,7 +103,7 @@ export const reducer = (state = initialState, action) => {
           return group;
         })
       }
-    case  DELETE_TASK:
+    case DELETE_TASK:
       return {
         ...state,
         data: state.data.map(group => {
@@ -115,6 +115,10 @@ export const reducer = (state = initialState, action) => {
           }
           return group;
         })
+      }
+    case RENAME_TASK:
+      return {
+        
       }
     default:
       return state;
