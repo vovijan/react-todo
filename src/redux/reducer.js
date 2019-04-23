@@ -1,4 +1,12 @@
-import { ADD_GROUP, EDIT_GROUP, DELETE_GROUP, ADD_TASK, CHANGE_TASK, DELETE_TASK } from './constants';
+import { 
+  ADD_GROUP, 
+  EDIT_GROUP, 
+  DELETE_GROUP, 
+  ADD_TASK, 
+  CHANGE_TASK, 
+  DELETE_TASK, 
+  RENAME_TASK 
+} from './constants';
 
 const initialState = {
   data: [
@@ -116,10 +124,24 @@ export const reducer = (state = initialState, action) => {
           return group;
         })
       }
-    /*case RENAME_TASK:
+    case RENAME_TASK:
       return {
-
-      }*/
+        ...state,
+        data: state.data.map(group => {
+          if (group.name === action.payload.groupName) {
+            return {
+              ...group,
+              tasks: group.tasks.map(task => {
+                if (task.id === action.payload.id) {
+                  task.name = action.payload.name;
+                }
+                return task;
+              })
+            }
+          }
+          return group;
+        })
+      }
     default:
       return state;
   }

@@ -15,12 +15,12 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  renameTask: (groupName, taskName) => {
-    dispatch(renameTask({ groupName, taskName }));
+  renameTask: (groupName, id, name) => {
+    dispatch(renameTask({ groupName, id, name }));
   }
 });
 
-const EditTaskContainer = ({task, selectedGroup}, renameTask) => 
+const EditTaskContainer = ({task, selectedGroup, renameTask}) => 
   <EditTask 
     task={task} 
     groupName={selectedGroup} 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './styleTasks.css';
 
@@ -6,10 +7,19 @@ export default class EditTask extends Component {
   state = {
     value: this.props.task.name
   }
-  onSubmit = (event) => {
+
+  handleChange = (event) => {
     event.preventDefault();
-    this.props.renameTask(this.props.groupName, this.state.value);
+    this.setState({
+      value: event.target.value
+    })
   }
+
+  handleClick = (event) => {
+    event.preventDefault();
+    this.props.renameTask(this.props.groupName, this.props.task.id, this.state.value);
+  }
+
   render() {
     return (
       <>
@@ -19,23 +29,27 @@ export default class EditTask extends Component {
         </h3>
         <form 
           className="form"
-          onSubmit={this.onSubmit}
         >
           <input 
             type="text"
             className="task__input"
             value={this.state.value}
-            onChange={(e) => this.setState({
-              value: e.target.value
-            })}
+            onChange={this.handleChange}
           />
-          <button 
-            type="button" 
-            className="btn btn-lg"
-          >
-            <i className="fas fa-save"></i>
-          </button>
+          
+            <button 
+              className="btn btn-lg"
+              onClick={this.handleClick}
+            >
+              <Link to={`/${this.props.groupName}`}>
+              <i className="fas fa-save"></i>
+              </Link>
+              
+            </button>
+          
+          
         </form>
+        
       </>
     )
   }
