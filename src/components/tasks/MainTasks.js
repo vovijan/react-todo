@@ -1,8 +1,8 @@
-import React from 'react';
-import TodoItem            from './TodoItem';
+import React      from 'react';
+import TodoItem   from './TodoItem';
+import AddTask    from './AddTask';
 
 import './styleTasks.css';
-import AddTask from './AddTask';
 
 const MainTasks = props => {
   return (

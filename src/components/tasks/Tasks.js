@@ -9,7 +9,10 @@ const Tasks = props => {
   const { id, name, tasks, addTask, changeTask, deleteTask } = props.group;
   return (
     <>
-      <TasksHeader name={name} />
+      <TasksHeader 
+        name={name}
+        tasks={tasks}
+      />
       <MainTasks 
         groupId={id}
         groupName={name}

@@ -48,3 +48,7 @@ input[type=checkbox]:focus {
   border: 2px solid darkgreen;
   border-radius: 7px;
 }
+
+.p__text-done {
+  color: red;
+}
