@@ -6,12 +6,17 @@ export default class EditTask extends Component {
   state = {
     value: this.props.task.name
   }
-  onSubmit = () => {
-
+  onSubmit = (event) => {
+    event.preventDefault();
+    this.props.renameTask(this.props.groupName, this.state.value);
   }
   render() {
     return (
       <>
+        <h3 className="title__center">
+          Task of group:&nbsp;&nbsp;
+          <span className="title__text">{this.props.groupName}!!!</span>
+        </h3>
         <form 
           className="form"
           onSubmit={this.onSubmit}

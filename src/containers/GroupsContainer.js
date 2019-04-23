@@ -12,7 +12,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(editGroup({ id, name }));
   },
   deleteGroup: (id) => {
-    dispatch(deleteGroup( id ))
+    dispatch(deleteGroup( id ));
   }
 });
 

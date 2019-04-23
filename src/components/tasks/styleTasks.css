@@ -34,9 +34,17 @@ input[type=checkbox]:focus {
   font-size: 24px;
 }
 
+.title__center {
+  text-align: center;
+}
+
+.title__text {
+  color: rebeccapurple;
+}
+
 .form {
   display: flex;
-  margin-bottom: 50px;
+  margin: 50px 0;
   border: 2px solid darkgreen;
   border-radius: 7px;
 }
