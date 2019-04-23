@@ -1,1 +1,1 @@
-<p> React Todo App </p>
+<p> React Todo App with React Redux and React Router</p>
